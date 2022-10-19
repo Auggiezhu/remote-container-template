@@ -1,18 +1,24 @@
 {
-	"name": "FrontEnd Learning",
-  	"image": "node:12.22.3",
+	"name": "Node.js",
+	"image": "node:12.22.3",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"ms-vscode-remote.remote-containers",
+				"esbenp.prettier-vscode",
+				"JakeWilson.vscode-cdnjs",
+				"ritwickdey.LiveServer",
+				"formulahendry.auto-rename-tag",
+				"svelte.svelte-vscode",
+				"njpwerner.autodocstring",
+				"TabNine.tabnine-vscode"
+			]
+		}
+	},
 	"forwardPorts": [
 		4321
 	],
-	"extensions": [
-		"dbaeumer.vscode-eslint",
-		"ms-vscode-remote.remote-containers",
-		"esbenp.prettier-vscode",
-		"JakeWilson.vscode-cdnjs",
-		"ritwickdey.LiveServer",
-		"formulahendry.auto-rename-tag",
-		"svelte.svelte-vscode",
-		"njpwerner.autodocstring",
-		"TabNine.tabnine-vscode"
-	]
+
+	"remoteUser": "node"
 }
