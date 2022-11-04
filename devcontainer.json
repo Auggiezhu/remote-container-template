@@ -1,24 +1,33 @@
 {
-	"name": "Node.js",
-	"image": "node:12.22.3",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"ms-vscode-remote.remote-containers",
-				"esbenp.prettier-vscode",
-				"JakeWilson.vscode-cdnjs",
-				"ritwickdey.LiveServer",
-				"formulahendry.auto-rename-tag",
-				"svelte.svelte-vscode",
-				"njpwerner.autodocstring",
-				"TabNine.tabnine-vscode"
-			]
-		}
-	},
-	"forwardPorts": [
-		4321
-	],
-
-	"remoteUser": "node"
+  "name": "Vue 3 Vite",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // "workspaceFolder": "/app",
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+	"formulahendry.auto-complete-tag",
+	"johnsoncodehk.volar",
+	"esbenp.prettier-vscode",
+	"Vue.volar",
+	"svelte.svelte-vscode",
+	"octref.vetur",
+	"bradlc.vscode-tailwindcss",
+	"oderwat.indent-rainbow",
+	"hoovercj.vscode-power-mode",
+	"naumovs.color-highlight",
+	"usernamehw.errorlens",
+	"syler.sass-indented"
+],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": ".devcontainer/postCreateCommand.sh",
+  // "postCreateCommand": "ls -la",
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
 }
